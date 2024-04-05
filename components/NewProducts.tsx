@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card';
+import Image from 'next/image';
 
 const productData = [
     {
