@@ -5,7 +5,7 @@ import Image from 'next/image';
 const productData = [
     {
     title: 'Kongo Koltuk Takımı',
-    img:'/kongo.png',
+    img:'kongo',
     },
     {
     title: 'Nijer Koltuk Takımı',
@@ -14,115 +14,115 @@ const productData = [
     
     {
     title: 'Viyana Koltuk Takımı',
-    img:'/viyana.png',
+    img:'viyana',
     },
     {
     title: 'Verona Koltuk Takımı',
-    img:'/verona.png',
+    img:'verona',
     },
     {
     title: 'Diva Koltuk Takımı',
-    img:'/diva.png',
+    img:'diva',
     },
     {
     title: 'Hazel Koltuk Takımı',
-    img:'/hazel.png',
+    img:'hazel',
     },
     {
     title: 'Nefes Koltuk Takımı',
-    img:'/nefes.png',
+    img:'nefes',
     },
     {
     title: 'Eylül Koltuk Takımı',
-    img:'/eylul.png',
+    img:'eylul',
     },
     {
     title: 'Riva Koltuk Takımı',
-    img:'/riva.png',
+    img:'riva',
     },
     {
     title: 'Barselona Koltuk Takımı',
-    img:'/barselona.png',
+    img:'barselona',
     },
     {
     title: 'Seul Koltuk Takımı',
-    img:'/seul.png',
+    img:'seul',
     },
     {
     title: 'Solo Koltuk Takımı',
-    img:'/Solo.png',
+    img:'Solo',
     },
     {
     title: 'Orkide Koltuk Takımı',
-    img:'/orkide.png',
+    img:'orkide',
     },
     {
     title: 'Tila Koltuk Takımı',
-    img:'/tila.png',
+    img:'tila',
     },
     {
     title: 'Milda Koltuk Takımı',
-    img:'/milda.png',
+    img:'milda',
     },
     {
     title: 'Versac Koltuk Takımı',
-    img:'/versac.png',
+    img:'versac',
     },
     {
     title: 'Star Koltuk Takımı',
-    img:'/star.png',
+    img:'star',
     },
     {
     title: 'Nepal Koltuk Takımı',
-    img:'/nepal.png',
+    img:'nepal',
     },
     {
     title: 'Sümbül Koltuk Takımı',
-    img:'/sumbul.png',
+    img:'sumbul',
     },
     {
     title: 'Safir Koltuk Takımı',
-    img:'/safir.png',
+    img:'safir',
     },
     {
     title: 'Milda Köşe Takımı',
-    img:'/mildakose.png',
+    img:'mildakose',
     },
     {
     title: 'Centa Koltuk Takımı',
-    img:'/centa.png',
+    img:'centa',
     },
     {
     title: 'Puzzle Köşe Takımı',
-    img:'/puzzle.png',
+    img:'puzzle',
     },
     {
     title: 'Bafra Köşe Takımı',
-    img:'/bafra.png',
+    img:'bafra',
     },
     {
     title: 'Kozmos Köşe Takımı',
-    img:'/kozmos.png',
+    img:'kozmos',
     },
     {
     title: 'Pera Köşe Takımı',
-    img:'/pera.png',
+    img:'pera',
     },
     {
     title: 'Tila Köşe Takımı',
-    img:'/tilakose.png',
+    img:'tilakose',
     },
     {
     title: 'Pukon Koltuk Takımı',
-    img:'/pukon.png',
+    img:'pukon',
     },
     {
     title: 'Sedef Koltuk Takımı',
-    img:'/sedef.png',
+    img:'sedef',
     },
     {
     title: 'Kozimo Koltuk Takımı',
-    img:'/kozimo.png',
+    img:'kozimo',
     },
 ];
 
