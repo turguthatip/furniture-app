@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    image: {
-        domain: ['https://turguthatip.github.io'],
-    },
+    images: {
+        loader: 'akamai',
+        path: '',
+      },
 };
 
 export default nextConfig;
