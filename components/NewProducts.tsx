@@ -1,6 +1,8 @@
 import React from 'react'
 import Card from './Card';
 import Image from 'next/image';
+import bafra from '/kongo.png'
+
 
 const productData = [
     {
