@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && touch out/.nojekyll && touch out/CNAM && echo \"assuva.com.tr\" >> out/CNAME && git add out/ && git subtree push --prefix out origin gh-pages  ",
     "start": "next start",
     "lint": "next lint"
   },
