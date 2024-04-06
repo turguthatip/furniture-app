@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/furniture.app'
-
+    reactStrictMode: true,
+    image: {
+        domain: ['https://turguthatip.github.io/furniture-app/'],
+    },
 };
-
-export default nextConfig;

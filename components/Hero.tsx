@@ -16,13 +16,13 @@ const Hero = () => {
     const slideData = [
     {
         id:0,
-        img:"/banner-1.png",
+        img:"banner-1",
         title: "Yeni Ürünler",
         mainTitle: "Koltuk Modelleri",
     },
     {
         id:1,
-        img:"/banner-2.png",
+        img:"banner-2",
         title: "Yeni Ürünler",
         mainTitle: "Koltuk Modelleri",
     },

@@ -9,7 +9,7 @@ const productData = [
     },
     {
     title: 'Nijer Koltuk Takımı',
-    img:'/nijer.png',
+    img:'nijer',
     },
     
     {
