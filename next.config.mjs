@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        loader: "akamai",
-        path: "/",
-      },
+    basePath: '/furniture.app'
+
 };
 
 export default nextConfig;
