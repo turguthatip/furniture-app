@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from './Card';
 import Image from 'next/image';
-import bafra from '/kongo.png'
 
 
 const productData = [
@@ -52,7 +51,7 @@ const productData = [
     },
     {
     title: 'Solo Koltuk Takımı',
-    img:'Solo',
+    img:'solo',
     },
     {
     title: 'Orkide Koltuk Takımı',

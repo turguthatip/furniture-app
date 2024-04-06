@@ -1,7 +1,5 @@
 import React from 'react'
 import Image from 'next/image';
-import bafra from '/kongo.png'
-
 
 interface propsType {
  title: string;
