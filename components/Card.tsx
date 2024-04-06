@@ -17,7 +17,7 @@ const Card: React.FC<propsType> =({
     <div>
         <Image 
         className='w-full h-auto' 
-        src={`/${img}.png`}
+        src={`/furniture-app/${img}.png`}
         width={400}
         height={30}
         alt={title}
