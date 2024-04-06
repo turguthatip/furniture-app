@@ -5,4 +5,7 @@ const nextConfig = {
         domain: ['https://turguthatip.github.io'],
     },
 };
+
+module.exports = nextConfig
+
 export default nextConfig;
