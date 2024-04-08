@@ -1,9 +1,7 @@
-/** @type {import('next-sitemap').IConfig} */
-const config = {
-    siteUrl:'https://assuva.com.tr/',
-    generateRobotsTxt: true,
-    generateIndexSitemap: false,
-    sitemapSize: 1000,
-  }
-  
-  export default config
+// eslint-disable-next-line no undef
+
+module.exports = {
+  siteUrl: 'https://assuva.com.tr',
+  generateRobotsTxt: true, // (optional)
+  // ...other options
+}
