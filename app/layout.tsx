@@ -25,14 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      
+
       <body className={inter.className}>
-      <GoogleAnalytics gaId="G-GZ5QJ7CLQ2" />
+        <GoogleAnalytics gaId="G-GZ5QJ7CLQ2" />
         <Headertop />
         <Header />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

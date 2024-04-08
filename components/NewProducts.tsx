@@ -1,148 +1,143 @@
-import React from 'react'
-import Card from './Card';
-import Image from 'next/image';
-
+import React from "react";
+import Card from "./Card";
+import Image from "next/image";
 
 const productData = [
     {
-    title: 'Kongo Koltuk Takımı',
-    img:'kongo',
+        title: "Kongo Koltuk Takımı",
+        img: "kongo",
     },
     {
-    title: 'Nijer Koltuk Takımı',
-    img:'nijer',
+        title: "Nijer Koltuk Takımı",
+        img: "nijer",
     },
-    
+
     {
-    title: 'Viyana Koltuk Takımı',
-    img:'viyana',
-    },
-    {
-    title: 'Verona Koltuk Takımı',
-    img:'verona',
+        title: "Viyana Koltuk Takımı",
+        img: "viyana",
     },
     {
-    title: 'Diva Koltuk Takımı',
-    img:'diva',
+        title: "Verona Koltuk Takımı",
+        img: "verona",
     },
     {
-    title: 'Hazel Koltuk Takımı',
-    img:'hazel',
+        title: "Diva Koltuk Takımı",
+        img: "diva",
     },
     {
-    title: 'Nefes Koltuk Takımı',
-    img:'nefes',
+        title: "Hazel Koltuk Takımı",
+        img: "hazel",
     },
     {
-    title: 'Eylül Koltuk Takımı',
-    img:'eylul',
+        title: "Nefes Koltuk Takımı",
+        img: "nefes",
     },
     {
-    title: 'Riva Koltuk Takımı',
-    img:'riva',
+        title: "Eylül Koltuk Takımı",
+        img: "eylul",
     },
     {
-    title: 'Barselona Koltuk Takımı',
-    img:'barselona',
+        title: "Riva Koltuk Takımı",
+        img: "riva",
     },
     {
-    title: 'Seul Koltuk Takımı',
-    img:'seul',
+        title: "Barselona Koltuk Takımı",
+        img: "barselona",
     },
     {
-    title: 'Solo Koltuk Takımı',
-    img:'solo',
+        title: "Seul Koltuk Takımı",
+        img: "seul",
     },
     {
-    title: 'Orkide Koltuk Takımı',
-    img:'orkide',
+        title: "Solo Koltuk Takımı",
+        img: "solo",
     },
     {
-    title: 'Tila Koltuk Takımı',
-    img:'tila',
+        title: "Orkide Koltuk Takımı",
+        img: "orkide",
     },
     {
-    title: 'Milda Koltuk Takımı',
-    img:'milda',
+        title: "Tila Koltuk Takımı",
+        img: "tila",
     },
     {
-    title: 'Versac Koltuk Takımı',
-    img:'versac',
+        title: "Milda Koltuk Takımı",
+        img: "milda",
     },
     {
-    title: 'Star Koltuk Takımı',
-    img:'star',
+        title: "Versac Koltuk Takımı",
+        img: "versac",
     },
     {
-    title: 'Nepal Koltuk Takımı',
-    img:'nepal',
+        title: "Star Koltuk Takımı",
+        img: "star",
     },
     {
-    title: 'Sümbül Koltuk Takımı',
-    img:'sumbul',
+        title: "Nepal Koltuk Takımı",
+        img: "nepal",
     },
     {
-    title: 'Safir Koltuk Takımı',
-    img:'safir',
+        title: "Sümbül Koltuk Takımı",
+        img: "sumbul",
     },
     {
-    title: 'Milda Köşe Takımı',
-    img:'mildakose',
+        title: "Safir Koltuk Takımı",
+        img: "safir",
     },
     {
-    title: 'Centa Koltuk Takımı',
-    img:'centa',
+        title: "Milda Köşe Takımı",
+        img: "mildakose",
     },
     {
-    title: 'Puzzle Köşe Takımı',
-    img:'puzzle',
+        title: "Centa Koltuk Takımı",
+        img: "centa",
     },
     {
-    title: 'Bafra Köşe Takımı',
-    img:'bafra',
+        title: "Puzzle Köşe Takımı",
+        img: "puzzle",
     },
     {
-    title: 'Kozmos Köşe Takımı',
-    img:'kozmos',
+        title: "Bafra Köşe Takımı",
+        img: "bafra",
     },
     {
-    title: 'Pera Köşe Takımı',
-    img:'pera',
+        title: "Kozmos Köşe Takımı",
+        img: "kozmos",
     },
     {
-    title: 'Tila Köşe Takımı',
-    img:'tilakose',
+        title: "Pera Köşe Takımı",
+        img: "pera",
     },
     {
-    title: 'Pukon Koltuk Takımı',
-    img:'pukon',
+        title: "Tila Köşe Takımı",
+        img: "tilakose",
     },
     {
-    title: 'Sedef Koltuk Takımı',
-    img:'sedef',
+        title: "Pukon Koltuk Takımı",
+        img: "pukon",
     },
     {
-    title: 'Kozimo Koltuk Takımı',
-    img:'kozimo',
+        title: "Sedef Koltuk Takımı",
+        img: "sedef",
+    },
+    {
+        title: "Kozimo Koltuk Takımı",
+        img: "kozimo",
     },
 ];
 
-const NewProducts= () => {
+const NewProducts = () => {
     return (
         <div>
-            <div className='container pt-16'>
-            <h2 className='font-medium text-2xl pb-4'>Yeni Ürünler</h2>
-            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {productData.map((item,index) => (
-            <Card
-            key={index}
-            title={item.title}
-            img={item.img}
-            />
-            ))}
-            </div>
+            <div className="container pt-16">
+                <h2 className="font-medium text-2xl pb-4">Yeni Ürünler</h2>
+                <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    {productData.map((item, index) => (
+                        <Card key={index} title={item.title} img={item.img} />
+                    ))}
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 export default NewProducts;
