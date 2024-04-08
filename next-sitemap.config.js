@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-    siteUrl: process.env.SITE_URL || 'assuva.com.tr',
+    siteUrl:'https://assuva.com.tr/',
     generateRobotsTxt: true,
     generateIndexSitemap: false,
     sitemapSize: 1000,
