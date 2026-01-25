@@ -19,7 +19,7 @@ const productData = [
 { title: "Polo Koltuk Takımı", img: "Polo_yeni" },
 { title: "Milda Koltuk Takımı", img: "milda_yeni" },
 { title: "Foca Koltuk Takımı", img: "foca_yeni" },
-{ title: "Eylul Koltuk Takımı", img: "eylul_yeni" },
+{ title: "Eylül Koltuk Takımı", img: "eylul_yeni" },
 { title: "Bohem Koltuk Takımı", img: "bohem_yeni" },
 { title: "Seul Koltuk Takımı", img: "seul_yeni" },
 { title: "Verona Koltuk Takımı", img: "verona_yeni" },
@@ -187,7 +187,7 @@ const NewProducts = () => {
             </div>
 
             {/* Product Title */}
-            <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center bg-black bg-opacity-50 px-4 py-2 rounded">
+            <p className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center bg-black bg-opacity-50 px-4 py-2 rounded text-base">
               {currentProduct.title} ({currentIndex + 1} / {productData.length})
             </p>
           </div>
