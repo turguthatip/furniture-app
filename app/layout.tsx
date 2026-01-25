@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Headertop from "@/components/Headertop";
 import Header from "@/components/Header";
 
 import "slick-carousel/slick/slick.css";
@@ -28,7 +27,6 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <GoogleAnalytics gaId="G-GZ5QJ7CLQ2" />
-        <Headertop />
         <Header />
         {children}
         <Footer />

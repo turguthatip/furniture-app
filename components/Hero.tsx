@@ -1,45 +1,33 @@
 "use client";
 import React from "react";
-import Slider from "react-slick";
-import Slide from "./Slide";
+import Image from "next/image";
 
 const Hero = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
-  const slideData = [
-    {
-      id: 0,
-      img: "banner-3",
-      title: "Yeni Ürünler",
-      mainTitle: "Koltuk Modelleri",
-    },
-    {
-      id: 1,
-      img: "banner-4",
-      title: "Yeni Ürünler",
-      mainTitle: "Koltuk Modelleri",
-    },
-  ];
-
   return (
-    <div>
-      <div className="container pt-6 lg:pt-0">
-        <Slider {...settings}>
-          {slideData.map((item) => (
-            <Slide
-              key={item.id}
-              img={item.img}
-              title={item.title}
-              mainTitle={item.mainTitle}
-            />
-          ))}
-        </Slider>
+    <div className="relative w-full overflow-hidden flex items-center justify-center bg-gray-100">
+      {/* Mobile Hero Image */}
+      <div className="relative w-full h-auto block md:hidden">
+        <Image
+          src="/mobileheroimage.png"
+          alt="Hero Image"
+          width={768}
+          height={1024}
+          priority
+          className="w-full h-auto object-contain"
+          sizes="100vw"
+        />
+      </div>
+      {/* Desktop Hero Image */}
+      <div className="relative w-full h-auto hidden md:block">
+        <Image
+          src="/heroimage.png"
+          alt="Hero Image"
+          width={1920}
+          height={1080}
+          priority
+          className="w-full h-auto object-contain"
+          sizes="100vw"
+        />
       </div>
     </div>
   );
