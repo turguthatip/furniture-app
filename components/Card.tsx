@@ -4,18 +4,22 @@ import Image from "next/image";
 interface propsType {
   title: string;
   img: string;
+  onImageClick: () => void;
 }
 
-const Card: React.FC<propsType> = ({ img, title }) => {
+const Card: React.FC<propsType> = ({ img, title, onImageClick }) => {
   return (
-    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-white lg:aspect-none lg:h-60">
-      <div>
+    <div className="w-full overflow-hidden rounded-md bg-white">
+      <div 
+        className="relative w-full aspect-[3/2] cursor-pointer hover:opacity-90 transition-opacity"
+        onClick={onImageClick}
+      >
         <Image
-          className="w-full h-auto"
+          className="w-full h-full object-cover"
           src={`/${img}.png`}
-          width={400}
-          height={30}
+          fill
           alt={title}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 33vw"
         />
       </div>
       <div className="mt-4 flex justify-between">
