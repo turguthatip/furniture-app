@@ -36,6 +36,7 @@ const productData = [
 const NewProducts = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = React.useRef<number | null>(null);
 
   const openModal = (index: number) => {
     setCurrentIndex(index);
@@ -104,6 +105,17 @@ const NewProducts = () => {
           <div
             className="relative max-w-5xl max-h-[90vh] w-full"
             onClick={(e) => e.stopPropagation()}
+            onTouchStart={(e) => {
+              touchStartX.current = e.touches[0].clientX;
+            }}
+            onTouchEnd={(e) => {
+              if (touchStartX.current === null) return;
+              const diff = touchStartX.current - e.changedTouches[0].clientX;
+              if (Math.abs(diff) > 50) {
+                diff > 0 ? goToNext() : goToPrevious();
+              }
+              touchStartX.current = null;
+            }}
           >
             {/* Close Button */}
             <button
