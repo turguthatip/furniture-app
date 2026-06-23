@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <div className="w-full px-4 md:px-8">
-        <NewProducts />
-      </div>
+      <NewProducts />
     </main>
   );
 }

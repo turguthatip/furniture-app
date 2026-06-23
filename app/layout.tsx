@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="tr">
 
       <body className={inter.className}>
+        <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
         <GoogleAnalytics gaId="G-GZ5QJ7CLQ2" />
         <Header />
         {children}

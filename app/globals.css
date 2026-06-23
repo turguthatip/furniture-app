@@ -5,3 +5,11 @@
 .max-width {
     @apply max-w-[1440px] mx-auto;
   }
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

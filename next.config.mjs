@@ -1,10 +1,11 @@
 // @ts-check
+import withExportImages from 'next-export-optimize-images';
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-  /* config options here */
+  output: 'export',
 };
 
-export default nextConfig;
+export default withExportImages(nextConfig);

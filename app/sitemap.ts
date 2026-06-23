@@ -1,6 +1,14 @@
 import { MetadataRoute } from 'next'
- 
+import { productData } from '@/lib/products'
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const productPages: MetadataRoute.Sitemap = productData.map((product) => ({
+    url: `https://assuva.com.tr/urunler/${product.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
   return [
     {
       url: 'https://assuva.com.tr',
@@ -8,5 +16,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 1,
     },
+    ...productPages,
   ]
 }

@@ -1,35 +1,28 @@
-"use client";
 import React from "react";
-import Image from "next/image";
+import Image from "next-export-optimize-images/image";
 
 const Hero = () => {
   return (
-    <div className="relative w-full overflow-hidden flex items-center justify-center bg-gray-100">
-      {/* Mobile Hero Image */}
-      <div className="relative w-full h-auto block md:hidden">
-        <Image
-          src="/mobileheroimage.png"
-          alt="Hero Image"
-          width={768}
-          height={1024}
-          priority
-          className="w-full h-auto object-contain"
-          sizes="100vw"
-        />
+    <section className="relative w-full h-[92vh] overflow-hidden">
+      {/* Full image */}
+      <Image
+        src="/ValenciaKoseTakimi1.png"
+        alt="Valencia Köşe Takımı"
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+
+      {/* Text with blur pill — top center */}
+      <div className="absolute top-10 inset-x-0 flex justify-center px-4">
+        <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-full px-8 py-4">
+          <p className="text-white text-lg md:text-2xl font-semibold tracking-wide text-center drop-shadow">
+            Konfor ve zarafet bir arada
+          </p>
+        </div>
       </div>
-      {/* Desktop Hero Image */}
-      <div className="relative w-full h-auto hidden md:block">
-        <Image
-          src="/heroimage.png"
-          alt="Hero Image"
-          width={1920}
-          height={1080}
-          priority
-          className="w-full h-auto object-contain"
-          sizes="100vw"
-        />
-      </div>
-    </div>
+    </section>
   );
 };
 
