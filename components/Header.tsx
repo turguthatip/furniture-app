@@ -23,10 +23,8 @@ export default function Header() {
   }, [menuOpen]);
 
   const desktopLinkClass = (isActive: boolean) =>
-    `relative uppercase tracking-[0.15em] text-base font-semibold text-gray-700 hover:text-gray-900 transition-colors
-     after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-gray-900
-     after:transition-transform after:duration-200 after:origin-left
-     ${isActive ? "after:scale-x-100" : "after:scale-x-0 hover:after:scale-x-100"}`;
+    `uppercase tracking-[0.15em] text-base font-semibold transition-colors
+     ${isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-900"}`;
 
   return (
     <>

@@ -12,6 +12,8 @@ export interface Product {
   dimensions: { label: string; value: string }[][];
   specs: ProductSpecs;
   yatakli?: boolean;
+  popular?: boolean;
+  dugunPaketi?: boolean;
 }
 
 const koltukSpecs: ProductSpecs = {
@@ -85,6 +87,7 @@ export const productData: Product[] = [
     slug: "valencia-koltuk-takimi",
     title: "Valencia Koltuk Takımı",
     category: "koltuk",
+    popular: true,
     images: ["valencia-koltuk-takimi-1", "valencia-koltuk-takimi-2", "valencia-koltuk-takimi-3", "valencia-koltuk-takimi-4", "valencia-koltuk-takimi-5"],
     description:
       "Valencia Koltuk Takımı, modern tasarımı ve üstün konforu ile oturma odanıza şıklık katmaktadır. Yüksek kaliteli kumaşı ve sağlam iç yapısı ile uzun yıllar boyunca size eşlik edecektir.",
@@ -106,6 +109,8 @@ export const productData: Product[] = [
     title: "Pablo Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    popular: true,
+    dugunPaketi: true,
     images: ["pablo-koltuk-takimi-1", "pablo-koltuk-takimi-2", "pablo-koltuk-takimi-3", "pablo-koltuk-takimi-4", "pablo-koltuk-takimi-5", "pablo-koltuk-takimi-6"],
     description:
       "Pablo Koltuk Takımı, minimalist çizgileri ve premium malzemeleriyle modern yaşam alanlarına mükemmel uyum sağlar. Dayanıklı yapısı ile uzun soluklu bir kullanım sunar.",
@@ -138,6 +143,8 @@ export const productData: Product[] = [
     title: "Castro Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    popular: true,
+    dugunPaketi: true,
     images: ["castro-koltuk-takimi-1", "castro-koltuk-takimi-2", "castro-koltuk-takimi-3", "castro-koltuk-takimi-4", "castro-koltuk-takimi-5"],
     description:
       "Castro Koltuk Takımı, çağdaş tasarımı ve kaliteli işçiliğiyle evinize değer katar. Özenle seçilmiş malzemeleri ile hem estetik hem de fonksiyonel bir tercih.",
@@ -159,6 +166,7 @@ export const productData: Product[] = [
     title: "Belinay Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["belinay-koltuk-takıımı-1", "belinay-koltuk-takıımı-2", "belinay-koltuk-takıımı-3", "belinay-koltuk-takıımı-4", "belinay-koltuk-takıımı-5"],
     description:
       "Belinay Koltuk Takımı, zarif tasarımı ve yüksek konfor anlayışıyla öne çıkar. Kaliteli kumaş seçenekleri ve sağlam yapısıyla uzun yıllar boyunca kullanım konforu sağlar.",
@@ -170,6 +178,7 @@ export const productData: Product[] = [
     title: "Solo Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["solo-koltuk-takımı-1", "solo-koltuk-takımı-2", "solo-koltuk-takımı-3", "solo-koltuk-takımı-4", "solo-koltuk-takımı-5", "solo-koltuk-takımı-6"],
     description:
       "Solo Koltuk Takımı, sade ve şık tasarımıyla her türlü dekor anlayışına uyum sağlar. Fonksiyonel yapısı ve kaliteli malzemeleriyle ideal bir oturma deneyimi sunar.",
@@ -181,6 +190,7 @@ export const productData: Product[] = [
     title: "Edremit Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["edremit-koltuk-takimi-1", "edremit-koltuk-takimi-2", "edremit-koltuk-takimi-3", "edremit-koltuk-takimi-4", "edremit-koltuk-takimi-5", "edremit-koltuk-takimi-6"],
     description:
       "Edremit Koltuk Takımı, doğanın huzurunu evinize taşıyan tasarımıyla öne çıkar. Geniş oturma alanı ve konforlu yapısıyla aile buluşmalarınızın vazgeçilmezi olur.",
@@ -202,6 +212,7 @@ export const productData: Product[] = [
     title: "Riva Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["riva-koltuk-takimi-1", "riva-koltuk-takimi-2", "riva-koltuk-takimi-3", "riva-koltuk-takimi-4", "riva-koltuk-takimi-5"],
     description:
       "Riva Koltuk Takımı, deniz kenarının ferahlığını evinize taşıyan tasarımıyla dikkat çeker. Dayanıklı yapısı ve şık görünümüyle uzun yıllar eşliğinizde olacaktır.",
@@ -223,6 +234,7 @@ export const productData: Product[] = [
     title: "Polo Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["polo-koltuk-takimi-1", "polo-koltuk-takimi-2", "polo-koltuk-takimi-3", "polo-koltuk-takimi-4", "polo-koltuk-takimi-5"],
     description:
       "Polo Koltuk Takımı, sportif çizgileri ve dinamik duruşuyla yaşam alanlarınıza enerji katar. Yüksek konfor ve dayanıklılık anlayışıyla tasarlanmıştır.",
@@ -264,6 +276,8 @@ export const productData: Product[] = [
     title: "Bohem Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    popular: true,
+    dugunPaketi: true,
     images: ["bohem-koltuk-takimi-1", "bohem-koltuk-takimi-2", "bohem-koltuk-takimi-3", "bohem-koltuk-takimi-4", "bohem-koltuk-takimi-5"],
     description:
       "Bohem Koltuk Takımı, özgür ruhlu tasarımı ile alışılmışın dışına çıkan yaşam alanları için idealdir. Kendine özgü karakteri ile odanızın odak noktası olur.",
@@ -285,6 +299,8 @@ export const productData: Product[] = [
     title: "Verona Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    popular: true,
+    dugunPaketi: true,
     images: ["verona-koltuk-takimi-1", "verona-koltuk-takimi-2", "verona-koltuk-takimi-3", "verona-koltuk-takimi-4", "verona-koltuk-takimi-5", "verona-koltuk-takimi-6"],
     description:
       "Verona Koltuk Takımı, İtalyan zarafetini evinize taşır. Klasik çizgileri ve lüks dokusu ile oturma odanıza prestij katar.",
@@ -296,6 +312,8 @@ export const productData: Product[] = [
     title: "Ceren Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    popular: true,
+    dugunPaketi: true,
     images: ["ceren-koltuk-takimi-1", "ceren-koltuk-takimi-2", "ceren-koltuk-takimi-3", "ceren-koltuk-takimi-4", "ceren-koltuk-takimi-5", "ceren-koltuk-takimi-6"],
     description:
       "Ceren Koltuk Takımı, zarif ve narin çizgileriyle yaşam alanlarınıza incelik katar. Yüksek kaliteli üretimi ve özenli işçiliğiyle uzun ömürlü bir tercih.",
@@ -307,6 +325,7 @@ export const productData: Product[] = [
     title: "Viyana Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["viyana-koltuk-takimi-1", "viyana-koltuk-takimi-2", "viyana-koltuk-takimi-3", "viyana-koltuk-takimi-4", "viyana-koltuk-takimi-5"],
     description:
       "Viyana Koltuk Takımı, Avusturya'nın klasik mimarisinden ilham alan tasarımıyla oturma odanıza ayrıcalık katar. Üstün kalite ve konforun mükemmel birleşimi.",
@@ -318,6 +337,7 @@ export const productData: Product[] = [
     title: "Hazel Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["hazel-koltuk-takimi-1", "hazel-koltuk-takimi-2", "hazel-koltuk-takimi-3", "hazel-koltuk-takimi-4", "hazel-koltuk-takimi-5", "hazel-koltuk-takimi-6"],
     description:
       "Hazel Koltuk Takımı, doğanın sıcak tonlarını evinize taşıyan fındık rengi ve sıcak dokusuyla öne çıkar. Rahat yapısı ve estetik görünümüyle ideal bir seçim.",
@@ -329,6 +349,7 @@ export const productData: Product[] = [
     title: "Akasya Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["akasya-koltuk-takimi-1", "akasya-koltuk-takimi-2", "akasya-koltuk-takimi-3", "akasya-koltuk-takimi-4", "akasya-koltuk-takimi-5", "akasya-koltuk-takimi-6"],
     description:
       "Akasya Koltuk Takımı, doğanın güzelliğini evinizin içine taşır. Organik formu ve sıcak malzemeleriyle doğal bir atmosfer yaratır.",
@@ -340,6 +361,7 @@ export const productData: Product[] = [
     title: "Tila Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["tila-koltuk-takimi-1", "tila-koltuk-takimi-2", "tila-koltuk-takimi-3", "tila-koltuk-takimi-4", "tila-koltuk-takimi-5", "tila-koltuk-takimi-6"],
     description:
       "Tila Koltuk Takımı, yenilikçi tasarımı ve üstün konforu ile modern yaşam alanlarının vazgeçilmezi olmaya adaydır. Şık görünümü ile her dekora uyum sağlar.",
@@ -351,6 +373,7 @@ export const productData: Product[] = [
     title: "Dikili Koltuk Takımı",
     category: "koltuk",
     yatakli: true,
+    dugunPaketi: true,
     images: ["dikili-koltuk-takimi-1", "dikili-koltuk-takimi-2", "dikili-koltuk-takimi-3", "dikili-koltuk-takimi-4", "dikili-koltuk-takimi-5", "dikili-koltuk-takimi-6"],
     description:
       "Dikili Koltuk Takımı, sade ve şık çizgileriyle her türlü dekor anlayışına uyum sağlar. Kaliteli üretimi ve dayanıklı yapısıyla uzun yıllar boyunca yanınızda olur.",
