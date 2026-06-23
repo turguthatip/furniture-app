@@ -110,11 +110,11 @@ export default function ProductSpecs({ teknik, istegeBasli, dimensions }: Props)
         <AccordionItem title="Genel Bilgiler">
           <ul className="mt-3 space-y-2.5">
             {[
-              "Ödeme şekilleri hakkında bilgi için tıklayınız.",
-              "Teslimat şekilleri hakkında bilgi için tıklayınız.",
-              "Nasıl sipariş verebileceğinizi öğrenmek için tıklayınız.",
+              "Ödeme şekilleri hakkında bilgi almak için iletişime geçin.",
+              "Teslimat şekilleri hakkında bilgi almak için iletişime geçin.",
+              "Nasıl sipariş verebileceğinizi öğrenmek için iletişime geçin.",
               "Tüm ürünlerimiz 2 yıl üretici garantilidir.",
-              "Bu ürün orjinal Balıkesir Mobilya mobilyasıdır.",
+              "Parekende satışımız yoktur.",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />
@@ -128,8 +128,7 @@ export default function ProductSpecs({ teknik, istegeBasli, dimensions }: Props)
         <AccordionItem title="Teslimat Şekilleri">
           <ul className="mt-3 space-y-2.5">
             {[
-              "Ürünlerimizi Türkiye'nin her yerinden sipariş verebilirsiniz.",
-              "Tüm Türkiye'ye nakliye hizmetimiz vardır.",
+              "Tüm Türkiye'ye nakliye hizmeti verebiliriz. Detaylar için iletişime geçin.",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2.5 text-sm text-gray-600">
                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0" />

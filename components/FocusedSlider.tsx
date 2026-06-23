@@ -5,8 +5,8 @@ import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 
 const slides = [
-  { src: "/edremit_yeni.png", label: "Koltuk Takımı", name: "Edremit", slug: "edremit-koltuk-takimi" },
   { src: "/pablo_yeni.png", label: "Koltuk Takımı", name: "Pablo", slug: "pablo-koltuk-takimi" },
+  { src: "/edremit_yeni.png", label: "Koltuk Takımı", name: "Edremit", slug: "edremit-koltuk-takimi" },
   { src: "/castro_yeni.png", label: "Koltuk Takımı", name: "Castro", slug: "castro-koltuk-takimi" },
   { src: "/Polo_yeni.png", label: "Koltuk Takımı", name: "Polo", slug: "polo-koltuk-takimi" },
   { src: "/seul_yeni.png", label: "Koltuk Takımı", name: "Seul", slug: "seul-koltuk-takimi" },
@@ -34,7 +34,7 @@ export default function FocusedSlider() {
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, i) => (
           <div key={i} className="px-2">
-            <div className="relative h-[70vh] overflow-hidden rounded-lg">
+            <div className="relative h-[40vh] md:h-[85vh] overflow-hidden rounded-lg">
               <Image
                 src={slide.src}
                 alt={`${slide.name} ${slide.label}`}
@@ -44,8 +44,9 @@ export default function FocusedSlider() {
               />
               <div className="slide-overlay absolute inset-0 bg-black transition-opacity duration-400" />
 
-              {/* Gradient */}
+              {/* Gradients */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-lg pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent rounded-lg pointer-events-none" />
 
               {/* Bottom bar */}
               <div className="absolute bottom-0 left-0 right-0 z-10 px-5 pb-5">

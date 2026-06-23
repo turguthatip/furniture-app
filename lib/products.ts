@@ -16,7 +16,21 @@ export interface Product {
 
 const koltukSpecs: ProductSpecs = {
   teknik: [
-{ label: "İskelet Özel", value: "Fırınlanmış gürgen ağacından üretilmiştir." },
+    { label: "İskelet Özel", value: "Fırınlanmış gürgen ağacından üretilmiştir." },
+    { label: "Kumaş Özel", value: "Silinebilir ve leke tutmaz kumaş kullanılmıştır." },
+    { label: "Sünger Özel", value: "Orta sertlikte sünger kullanılmıştır." },
+    { label: "Ayak Özel", value: "Ayaklar ahşaptır." },
+  ],
+  istegeBasli: [
+    "Takımdaki modüllerden çıkartabilir veya ekleyebilirsiniz (3+3+1+1, 3+3, 3+1 gibi.).",
+    "Çıkartılan modül fiyatı veya eklenen modül fiyatı takım fiyatına yansır.",
+    "Müşteri talebine göre kumaş rengi ve türü değişebilmektedir, bu değişimden oluşan fark takım fiyatına yansır.",
+  ],
+};
+
+const yatakliKoltukSpecs: ProductSpecs = {
+  teknik: [
+    { label: "İskelet Özel", value: "Fırınlanmış gürgen ağacından üretilmiştir." },
     { label: "Kumaş Özel", value: "Silinebilir ve leke tutmaz kumaş kullanılmıştır." },
     { label: "Sünger Özel", value: "Orta sertlikte sünger kullanılmıştır." },
     { label: "Yatak & Sandık", value: "Yatak özelliği bulunmaktadır." },
@@ -31,10 +45,9 @@ const koltukSpecs: ProductSpecs = {
 
 const koseSpecs: ProductSpecs = {
   teknik: [
-{ label: "İskelet Özel", value: "Fırınlanmış gürgen ağacından üretilmiştir." },
+    { label: "İskelet Özel", value: "Fırınlanmış gürgen ağacından üretilmiştir." },
     { label: "Kumaş Özel", value: "Silinebilir ve leke tutmaz kumaş kullanılmıştır." },
     { label: "Sünger Özel", value: "Orta sertlikte sünger kullanılmıştır." },
-    { label: "Yatak & Sandık", value: "Yatak özelliği bulunmaktadır." },
     { label: "Ayak Özel", value: "Ayaklar ahşaptır." },
   ],
   istegeBasli: [
@@ -97,7 +110,7 @@ export const productData: Product[] = [
     description:
       "Pablo Koltuk Takımı, minimalist çizgileri ve premium malzemeleriyle modern yaşam alanlarına mükemmel uyum sağlar. Dayanıklı yapısı ile uzun soluklu bir kullanım sunar.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "idol-koltuk-takimi",
@@ -129,7 +142,7 @@ export const productData: Product[] = [
     description:
       "Castro Koltuk Takımı, çağdaş tasarımı ve kaliteli işçiliğiyle evinize değer katar. Özenle seçilmiş malzemeleri ile hem estetik hem de fonksiyonel bir tercih.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "midilli-koltuk-takimi",
@@ -150,7 +163,7 @@ export const productData: Product[] = [
     description:
       "Belinay Koltuk Takımı, zarif tasarımı ve yüksek konfor anlayışıyla öne çıkar. Kaliteli kumaş seçenekleri ve sağlam yapısıyla uzun yıllar boyunca kullanım konforu sağlar.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "solo-koltuk-takimi",
@@ -161,7 +174,7 @@ export const productData: Product[] = [
     description:
       "Solo Koltuk Takımı, sade ve şık tasarımıyla her türlü dekor anlayışına uyum sağlar. Fonksiyonel yapısı ve kaliteli malzemeleriyle ideal bir oturma deneyimi sunar.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "edremit-koltuk-takimi",
@@ -172,7 +185,7 @@ export const productData: Product[] = [
     description:
       "Edremit Koltuk Takımı, doğanın huzurunu evinize taşıyan tasarımıyla öne çıkar. Geniş oturma alanı ve konforlu yapısıyla aile buluşmalarınızın vazgeçilmezi olur.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "melis-koltuk-takimi",
@@ -193,7 +206,7 @@ export const productData: Product[] = [
     description:
       "Riva Koltuk Takımı, deniz kenarının ferahlığını evinize taşıyan tasarımıyla dikkat çeker. Dayanıklı yapısı ve şık görünümüyle uzun yıllar eşliğinizde olacaktır.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "didim-koltuk-takimi",
@@ -214,7 +227,7 @@ export const productData: Product[] = [
     description:
       "Polo Koltuk Takımı, sportif çizgileri ve dinamik duruşuyla yaşam alanlarınıza enerji katar. Yüksek konfor ve dayanıklılık anlayışıyla tasarlanmıştır.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "milda-koltuk-takimi",
@@ -255,7 +268,7 @@ export const productData: Product[] = [
     description:
       "Bohem Koltuk Takımı, özgür ruhlu tasarımı ile alışılmışın dışına çıkan yaşam alanları için idealdir. Kendine özgü karakteri ile odanızın odak noktası olur.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "seul-koltuk-takimi",
@@ -276,7 +289,7 @@ export const productData: Product[] = [
     description:
       "Verona Koltuk Takımı, İtalyan zarafetini evinize taşır. Klasik çizgileri ve lüks dokusu ile oturma odanıza prestij katar.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "ceren-koltuk-takimi",
@@ -287,7 +300,7 @@ export const productData: Product[] = [
     description:
       "Ceren Koltuk Takımı, zarif ve narin çizgileriyle yaşam alanlarınıza incelik katar. Yüksek kaliteli üretimi ve özenli işçiliğiyle uzun ömürlü bir tercih.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "viyana-koltuk-takimi",
@@ -298,7 +311,7 @@ export const productData: Product[] = [
     description:
       "Viyana Koltuk Takımı, Avusturya'nın klasik mimarisinden ilham alan tasarımıyla oturma odanıza ayrıcalık katar. Üstün kalite ve konforun mükemmel birleşimi.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "hazel-koltuk-takimi",
@@ -309,7 +322,7 @@ export const productData: Product[] = [
     description:
       "Hazel Koltuk Takımı, doğanın sıcak tonlarını evinize taşıyan fındık rengi ve sıcak dokusuyla öne çıkar. Rahat yapısı ve estetik görünümüyle ideal bir seçim.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "akasya-koltuk-takimi",
@@ -320,7 +333,7 @@ export const productData: Product[] = [
     description:
       "Akasya Koltuk Takımı, doğanın güzelliğini evinizin içine taşır. Organik formu ve sıcak malzemeleriyle doğal bir atmosfer yaratır.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "tila-koltuk-takimi",
@@ -331,7 +344,7 @@ export const productData: Product[] = [
     description:
       "Tila Koltuk Takımı, yenilikçi tasarımı ve üstün konforu ile modern yaşam alanlarının vazgeçilmezi olmaya adaydır. Şık görünümü ile her dekora uyum sağlar.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "dikili-koltuk-takimi",
@@ -342,7 +355,7 @@ export const productData: Product[] = [
     description:
       "Dikili Koltuk Takımı, sade ve şık çizgileriyle her türlü dekor anlayışına uyum sağlar. Kaliteli üretimi ve dayanıklı yapısıyla uzun yıllar boyunca yanınızda olur.",
     dimensions: koltukDims,
-    specs: koltukSpecs,
+    specs: yatakliKoltukSpecs,
   },
   {
     slug: "puzzle-kose-takimi",

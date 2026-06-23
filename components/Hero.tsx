@@ -3,7 +3,7 @@ import Image from "next-export-optimize-images/image";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-[92vh] overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
       {/* Full image */}
       <Image
         src="/ValenciaKoseTakimi1.png"
@@ -14,8 +14,8 @@ const Hero = () => {
         sizes="100vw"
       />
 
-      {/* Text with blur pill — top center */}
-      <div className="absolute top-10 inset-x-0 flex justify-center px-4">
+      {/* Text with blur pill — bottom center */}
+      <div className="absolute bottom-12 inset-x-0 flex justify-center px-4">
         <div className="backdrop-blur-md bg-white/20 border border-white/30 rounded-full px-8 py-4">
           <p className="text-white text-lg md:text-2xl font-semibold tracking-wide text-center drop-shadow">
             Konfor ve zarafet bir arada
