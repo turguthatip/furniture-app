@@ -13,3 +13,34 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+.focused-slider .slick-slide {
+  transition: none;
+}
+
+.focused-slider .slick-center {
+}
+
+.focused-slider .slick-slide .slide-overlay {
+  opacity: 0.65;
+  transition: opacity 0.4s ease;
+}
+
+.focused-slider .slick-center .slide-overlay {
+  opacity: 0;
+}
+
+.focused-slider .slick-dots {
+  margin-top: 12px;
+  position: static;
+}
+
+.focused-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #d1d5db;
+  opacity: 1;
+}
+
+.focused-slider .slick-dots li.slick-active button:before {
+  color: #111827;
+}
