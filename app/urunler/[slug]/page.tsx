@@ -18,7 +18,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return { title: "Ürün Bulunamadı" };
-  return { title: `${product.title} | Assuva Mobilya` };
+  return {
+    title: `${product.title} | Assuva Mobilya`,
+    description: product.description,
+    openGraph: {
+      title: `${product.title} | Assuva Mobilya`,
+      description: product.description,
+      images: product.images[0] ? [{ url: product.images[0], alt: product.title }] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.title} | Assuva Mobilya`,
+      description: product.description,
+    },
+  };
 }
 
 export default async function ProductPage({ params }: Props) {
@@ -28,8 +41,27 @@ export default async function ProductPage({ params }: Props) {
 
   const others = productData.filter((p) => p.slug !== product.slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.title,
+    description: product.description,
+    image: product.images,
+    brand: { "@type": "Brand", name: "Assuva Mobilya" },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      priceCurrency: "TRY",
+      seller: { "@type": "Organization", name: "Assuva Mobilya" },
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="w-full px-4 md:px-8 xl:px-16 py-8">
 {/* Two-column checkout layout */}
         <div className="grid grid-cols-1 lg:grid-cols-[5fr_2fr] gap-8 lg:gap-10 xl:gap-16 items-start">

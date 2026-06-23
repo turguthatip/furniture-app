@@ -31,7 +31,7 @@ export default function Header() {
       {/* Mobile bar */}
       <nav className="flex md:hidden justify-between items-center border-b border-gray-200 bg-white py-4 px-4">
         <a href="/">
-          <Image src="/assuva-logo.png" alt="Assuva Logo" width={100} height={100} className="h-14 w-auto" />
+          <Image src="/assuva-logo.png" alt="Assuva Logo" width={100} height={100} className="h-14 w-auto" priority />
         </a>
         <button onClick={() => setMenuOpen(true)} aria-label="Menüyü aç" className="p-2 text-gray-900">
           <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ export default function Header() {
         </div>
         <div className="flex justify-center">
           <a href="/">
-            <Image src="/assuva-logo.png" alt="Assuva Logo" width={120} height={120} className="h-24 w-auto" />
+            <Image src="/assuva-logo.png" alt="Assuva Logo" width={120} height={120} className="h-24 w-auto" priority />
           </a>
         </div>
         <div className="flex justify-start pl-16">

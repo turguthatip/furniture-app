@@ -3,18 +3,33 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/components/Footer";
-import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteDescription =
+  "Assuva Mobilya, ev dekorasyonunda en üst düzey kalite ve estetik arayanlar için tasarlanmış özgün mobilya koleksiyonları sunar. Her bir parça, ustalıkla işlenmiş ve dayanıklı malzemeler kullanılarak üretilmiştir. Geniş ürün yelpazemiz, her tarza ve mekana uygun seçenekler sunar; yatak odası takımları, modern oturma grupları, işlevsel mutfak dolapları ve daha fazlası. Balıkesir Mobilya ile evinizi özgünlük ve zarafetle dönüştürün";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://assuva.com.tr"),
   title: "Kaliteli Mobilya Üreticisi - Balıkesir Mobilya",
-  description: "Assuva Mobilya, ev dekorasyonunda en üst düzey kalite ve estetik arayanlar için tasarlanmış özgün mobilya koleksiyonları sunar. Her bir parça, ustalıkla işlenmiş ve dayanıklı malzemeler kullanılarak üretilmiştir. Geniş ürün yelpazemiz, her tarza ve mekana uygun seçenekler sunar; yatak odası takımları, modern oturma grupları, işlevsel mutfak dolapları ve daha fazlası. Balıkesir Mobilya ile evinizi özgünlük ve zarafetle dönüştürün",
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    locale: "tr_TR",
+    siteName: "Assuva Mobilya",
+    title: "Kaliteli Mobilya Üreticisi - Balıkesir Mobilya",
+    description: siteDescription,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Assuva Mobilya" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kaliteli Mobilya Üreticisi - Balıkesir Mobilya",
+    description: siteDescription,
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +41,6 @@ export default function RootLayout({
     <html lang="tr">
 
       <body className={inter.className}>
-        <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
         <GoogleAnalytics gaId="G-GZ5QJ7CLQ2" />
         <Header />
         {children}

@@ -1,6 +1,8 @@
 "use client";
 import { useRef } from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 
@@ -41,6 +43,7 @@ export default function FocusedSlider() {
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 90vw, 64vw"
+                priority={i === 0}
               />
               <div className="slide-overlay absolute inset-0 bg-black transition-opacity duration-400" />
 
