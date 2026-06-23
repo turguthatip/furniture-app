@@ -6,6 +6,7 @@ export interface ProductSpecs {
 export interface Product {
   slug: string;
   title: string;
+  category: "koltuk" | "kose";
   images: string[];
   description: string;
   dimensions: { label: string; value: string }[][];
@@ -70,6 +71,7 @@ export const productData: Product[] = [
   {
     slug: "valencia-koltuk-takimi",
     title: "Valencia Koltuk Takımı",
+    category: "koltuk",
     images: ["valencia-koltuk-takimi-1", "valencia-koltuk-takimi-2", "valencia-koltuk-takimi-3", "valencia-koltuk-takimi-4", "valencia-koltuk-takimi-5"],
     description:
       "Valencia Koltuk Takımı, modern tasarımı ve üstün konforu ile oturma odanıza şıklık katmaktadır. Yüksek kaliteli kumaşı ve sağlam iç yapısı ile uzun yıllar boyunca size eşlik edecektir.",
@@ -79,6 +81,7 @@ export const productData: Product[] = [
   {
     slug: "valencia-kose-takimi",
     title: "Valencia Köşe Takımı",
+    category: "kose",
     images: ["ValenciaKoseTakimi1", "ValenciaKoseTakimi2", "ValenciaKoseTakimi3", "ValenciaKoseTakimi4", "ValenciaKoseTakimi5"],
     description:
       "Valencia Köşe Takımı, geniş oturma alanı ve ergonomik yapısıyla ailenizin tüm üyelerine konforlu bir deneyim sunar. Şık tasarımı ile odanızın odak noktası olacaktır.",
@@ -88,6 +91,7 @@ export const productData: Product[] = [
   {
     slug: "pablo-koltuk-takimi",
     title: "Pablo Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["pablo-koltuk-takimi-1", "pablo-koltuk-takimi-2", "pablo-koltuk-takimi-3", "pablo-koltuk-takimi-4", "pablo-koltuk-takimi-5", "pablo-koltuk-takimi-6"],
     description:
@@ -98,6 +102,7 @@ export const productData: Product[] = [
   {
     slug: "idol-koltuk-takimi",
     title: "İdol Koltuk Takımı",
+    category: "koltuk",
     images: ["idol-koltuk-takimi-1", "idol-koltuk-takimi-2", "idol-koltuk-takimi-3", "idol-koltuk-takimi-4", "idol-koltuk-takimi-5"],
     description:
       "İdol Koltuk Takımı, özgün tasarımı ile oturma odanıza karakterini katar. Yüksek yoğunluklu süngeri ve kaliteli kumaşıyla her oturuşta ayrı bir konfor hissi sunar.",
@@ -118,6 +123,7 @@ export const productData: Product[] = [
   {
     slug: "castro-koltuk-takimi",
     title: "Castro Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["castro-koltuk-takimi-1", "castro-koltuk-takimi-2", "castro-koltuk-takimi-3", "castro-koltuk-takimi-4", "castro-koltuk-takimi-5"],
     description:
@@ -128,6 +134,7 @@ export const productData: Product[] = [
   {
     slug: "midilli-koltuk-takimi",
     title: "Midilli Koltuk Takımı",
+    category: "koltuk",
     images: ["midillik-koltuk-takimi-1", "midillik-koltuk-takimi-2", "midillik-koltuk-takimi-3", "midillik-koltuk-takimi-4", "midillik-koltuk-takimi-5"],
     description:
       "Midilli Koltuk Takımı, Ege'nin özgür ruhunu evinize taşır. Sıcak renk seçenekleri ve rahat oturma yüzeyi ile dinlenme anlarınızı konforlu hale getirir.",
@@ -137,6 +144,7 @@ export const productData: Product[] = [
   {
     slug: "belinay-koltuk-takimi",
     title: "Belinay Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["belinay-koltuk-takıımı-1", "belinay-koltuk-takıımı-2", "belinay-koltuk-takıımı-3", "belinay-koltuk-takıımı-4", "belinay-koltuk-takıımı-5"],
     description:
@@ -147,6 +155,7 @@ export const productData: Product[] = [
   {
     slug: "solo-koltuk-takimi",
     title: "Solo Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["solo-koltuk-takımı-1", "solo-koltuk-takımı-2", "solo-koltuk-takımı-3", "solo-koltuk-takımı-4", "solo-koltuk-takımı-5", "solo-koltuk-takımı-6"],
     description:
@@ -157,6 +166,7 @@ export const productData: Product[] = [
   {
     slug: "edremit-koltuk-takimi",
     title: "Edremit Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["edremit-koltuk-takimi-1", "edremit-koltuk-takimi-2", "edremit-koltuk-takimi-3", "edremit-koltuk-takimi-4", "edremit-koltuk-takimi-5", "edremit-koltuk-takimi-6"],
     description:
@@ -167,6 +177,7 @@ export const productData: Product[] = [
   {
     slug: "melis-koltuk-takimi",
     title: "Melis Koltuk Takımı",
+    category: "koltuk",
     images: ["melis-koltuk-takimi-1", "melis-koltuk-takimi-2", "melis-koltuk-takimi-3", "melis-koltuk-takimi-4", "melis-koltuk-takimi-5"],
     description:
       "Melis Koltuk Takımı, feminen çizgileri ve sofistike duruşuyla yaşam alanlarınızı tamamlar. Özenle tasarlanmış detayları ile estetik ve konforu bir arada sunar.",
@@ -176,6 +187,7 @@ export const productData: Product[] = [
   {
     slug: "riva-koltuk-takimi",
     title: "Riva Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["riva-koltuk-takimi-1", "riva-koltuk-takimi-2", "riva-koltuk-takimi-3", "riva-koltuk-takimi-4", "riva-koltuk-takimi-5"],
     description:
@@ -186,6 +198,7 @@ export const productData: Product[] = [
   {
     slug: "didim-koltuk-takimi",
     title: "Didim Koltuk Takımı",
+    category: "koltuk",
     images: ["didim-koltuk-takimi-1", "didim-koltuk-takimi-2", "didim-koltuk-takimi-3", "didim-koltuk-takimi-4", "didim-koltuk-takimi-5"],
     description:
       "Didim Koltuk Takımı, modern ve klasiği harmanlayan tasarımıyla her eve uyum sağlar. Kaliteli malzemeleri ve işçiliğiyle konforun ve estetiğin mükemmel birleşimini sunar.",
@@ -195,6 +208,7 @@ export const productData: Product[] = [
   {
     slug: "polo-koltuk-takimi",
     title: "Polo Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["polo-koltuk-takimi-1", "polo-koltuk-takimi-2", "polo-koltuk-takimi-3", "polo-koltuk-takimi-4", "polo-koltuk-takimi-5"],
     description:
@@ -205,6 +219,7 @@ export const productData: Product[] = [
   {
     slug: "milda-koltuk-takimi",
     title: "Milda Koltuk Takımı",
+    category: "koltuk",
     images: ["milda-koltuk-takimi-1", "milda-koltuk-takimi-2", "milda-koltuk-takimi-3", "milda-koltuk-takimi-4", "milda-koltuk-takimi-5"],
     description:
       "Milda Koltuk Takımı, Kuzey Avrupa'nın minimalist estetiğini Türk işçiliğiyle buluşturur. Temiz hatları ve fonksiyonel yapısıyla modern yaşam alanlarının vazgeçilmezidir.",
@@ -214,6 +229,7 @@ export const productData: Product[] = [
   {
     slug: "foca-koltuk-takimi",
     title: "Foça Koltuk Takımı",
+    category: "koltuk",
     images: ["foca-koltuk-takimi-1", "foca-koltuk-takimi-2", "foca-koltuk-takimi-3", "foca-koltuk-takimi-4", "foca-koltuk-takimi-5"],
     description:
       "Foça Koltuk Takımı, tarihi Foça'nın eşsiz güzelliğinden ilham alan tasarımıyla öne çıkar. Sıcak tonları ve konforlu yapısıyla evinize huzur getirir.",
@@ -223,6 +239,7 @@ export const productData: Product[] = [
   {
     slug: "eylul-koltuk-takimi",
     title: "Eylül Koltuk Takımı",
+    category: "koltuk",
     images: ["eylul-koltuk-takimi-1", "eylul-koltuk-takimi-2", "eylul-koltuk-takimi-3", "eylul-koltuk-takimi-4", "eylul-koltuk-takimi-5", "eylul-koltuk-takimi-6"],
     description:
       "Eylül Koltuk Takımı, sonbaharın sıcak renklerini yaşam alanlarınıza yansıtır. Özenli işçiliği ve kaliteli malzemeleriyle uzun ömürlü konfor sağlar.",
@@ -232,6 +249,7 @@ export const productData: Product[] = [
   {
     slug: "bohem-koltuk-takimi",
     title: "Bohem Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["bohem-koltuk-takimi-1", "bohem-koltuk-takimi-2", "bohem-koltuk-takimi-3", "bohem-koltuk-takimi-4", "bohem-koltuk-takimi-5"],
     description:
@@ -242,6 +260,7 @@ export const productData: Product[] = [
   {
     slug: "seul-koltuk-takimi",
     title: "Seul Koltuk Takımı",
+    category: "koltuk",
     images: ["seul-koltuk-takimi-1", "seul-koltuk-takimi-2", "seul-koltuk-takimi-3", "seul-koltuk-takimi-4", "seul-koltuk-takimi-5"],
     description:
       "Seul Koltuk Takımı, Uzak Doğu'nun şık estetiğini modern konforla buluşturur. Özel tasarım detayları ve kaliteli üretimi ile yaşam alanlarınıza değer katar.",
@@ -251,6 +270,7 @@ export const productData: Product[] = [
   {
     slug: "verona-koltuk-takimi",
     title: "Verona Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["verona-koltuk-takimi-1", "verona-koltuk-takimi-2", "verona-koltuk-takimi-3", "verona-koltuk-takimi-4", "verona-koltuk-takimi-5", "verona-koltuk-takimi-6"],
     description:
@@ -261,6 +281,7 @@ export const productData: Product[] = [
   {
     slug: "ceren-koltuk-takimi",
     title: "Ceren Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["ceren-koltuk-takimi-1", "ceren-koltuk-takimi-2", "ceren-koltuk-takimi-3", "ceren-koltuk-takimi-4", "ceren-koltuk-takimi-5", "ceren-koltuk-takimi-6"],
     description:
@@ -271,6 +292,7 @@ export const productData: Product[] = [
   {
     slug: "viyana-koltuk-takimi",
     title: "Viyana Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["viyana-koltuk-takimi-1", "viyana-koltuk-takimi-2", "viyana-koltuk-takimi-3", "viyana-koltuk-takimi-4", "viyana-koltuk-takimi-5"],
     description:
@@ -281,6 +303,7 @@ export const productData: Product[] = [
   {
     slug: "hazel-koltuk-takimi",
     title: "Hazel Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["hazel-koltuk-takimi-1", "hazel-koltuk-takimi-2", "hazel-koltuk-takimi-3", "hazel-koltuk-takimi-4", "hazel-koltuk-takimi-5", "hazel-koltuk-takimi-6"],
     description:
@@ -291,6 +314,7 @@ export const productData: Product[] = [
   {
     slug: "akasya-koltuk-takimi",
     title: "Akasya Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["akasya-koltuk-takimi-1", "akasya-koltuk-takimi-2", "akasya-koltuk-takimi-3", "akasya-koltuk-takimi-4", "akasya-koltuk-takimi-5", "akasya-koltuk-takimi-6"],
     description:
@@ -301,6 +325,7 @@ export const productData: Product[] = [
   {
     slug: "tila-koltuk-takimi",
     title: "Tila Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["tila-koltuk-takimi-1", "tila-koltuk-takimi-2", "tila-koltuk-takimi-3", "tila-koltuk-takimi-4", "tila-koltuk-takimi-5", "tila-koltuk-takimi-6"],
     description:
@@ -311,6 +336,7 @@ export const productData: Product[] = [
   {
     slug: "dikili-koltuk-takimi",
     title: "Dikili Koltuk Takımı",
+    category: "koltuk",
     yatakli: true,
     images: ["dikili-koltuk-takimi-1", "dikili-koltuk-takimi-2", "dikili-koltuk-takimi-3", "dikili-koltuk-takimi-4", "dikili-koltuk-takimi-5", "dikili-koltuk-takimi-6"],
     description:
@@ -321,6 +347,7 @@ export const productData: Product[] = [
   {
     slug: "puzzle-kose-takimi",
     title: "Puzzle Köşe Takımı",
+    category: "kose",
     images: ["puzzle-kose-takimi-1", "puzzle-kose-takimi-2", "puzzle-kose-takimi-3", "puzzle-kose-takimi-4", "puzzle-kose-takimi-5", "puzzle-kose-takimi-6"],
     description:
       "Puzzle Köşe Takımı, modüler yapısıyla oturma odanıza en uygun şekilde konumlandırılabilir. Geniş oturma alanı ve yüksek konforu ile tüm ailenize hizmet eder.",
@@ -330,6 +357,7 @@ export const productData: Product[] = [
   {
     slug: "centra-kose-takimi",
     title: "Centra Köşe Takımı",
+    category: "kose",
     images: ["centra-kose-takimi-1", "centra-kose-takimi-2", "centra-kose-takimi-3", "centra-kose-takimi-4", "centra-kose-takimi-5"],
     description:
       "Centra Köşe Takımı, merkezi tasarımı ile odanızın kalbine yerleşir. Ferah oturma alanı ve şık görünümüyle hem estetik hem de fonksiyonel bir tercih.",
@@ -340,4 +368,8 @@ export const productData: Product[] = [
 
 export function getProductBySlug(slug: string): Product | undefined {
   return productData.find((p) => p.slug === slug);
+}
+
+export function getProductsByCategory(category: Product["category"]): Product[] {
+  return productData.filter((p) => p.category === category);
 }
