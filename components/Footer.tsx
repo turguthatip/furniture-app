@@ -1,13 +1,11 @@
 import React from "react";
 import Image from "next-export-optimize-images/image";
 import Link from "next/link";
-import { FaWhatsapp, FaPhone, FaMapMarkerAlt, FaTruck } from "react-icons/fa";
+import { FaPhone, FaMapMarkerAlt, FaTruck } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiOutlineRefresh } from "react-icons/hi";
 
 const Footer = () => {
-  const whatsappUrl = "https://wa.me/902662442765?text=Merhaba%2C%20bilgi%20almak%20istiyorum.";
-
   const trustItems = [
     {
       icon: <HiOutlineRefresh size={30} />,
@@ -72,12 +70,6 @@ const Footer = () => {
             className="flex items-center gap-3 text-sm text-gray-500 hover:text-gray-900 transition-colors">
             <MdEmail className="flex-shrink-0 text-gray-400" size={16} />
             info@assuva.com.tr
-          </a>
-
-          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-            className="flex items-center gap-3 text-sm text-gray-400 hover:text-green-400 transition-colors">
-            <FaWhatsapp className="flex-shrink-0 text-gray-400" size={16} />
-            WhatsApp ile Ulaşın
           </a>
         </div>
       </div>

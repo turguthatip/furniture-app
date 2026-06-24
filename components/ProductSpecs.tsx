@@ -8,7 +8,7 @@ interface Props {
   dimensions: { label: string; value: string }[][];
 }
 
-const groupNames: Record<number, string> = { 0: "Kanepe (3'lü)", 1: "Koltuk (1'li)" };
+const groupNames: Record<number, string> = { 0: "Koltuk (3'lü)", 1: "Berjer (1'li)" };
 
 function AccordionItem({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(defaultOpen);
@@ -44,7 +44,7 @@ export default function ProductSpecs({ teknik, istegeBasli, dimensions }: Props)
       <div className="flex flex-col gap-3">
 
         {/* Teknik Özellikler */}
-        <AccordionItem title="Teknik Özellikler" defaultOpen>
+        <AccordionItem title="Teknik Özellikler">
           <div className="overflow-x-auto mt-3">
             <table className="w-full text-sm border-collapse rounded overflow-hidden">
               <thead>
