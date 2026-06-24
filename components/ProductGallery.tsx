@@ -25,6 +25,8 @@ export default function ProductGallery({ images, title }: Props) {
     setSelected(i);
   }
 
+  const touchStartX = useRef<number | null>(null);
+
   const closeLightbox = useCallback(() => setLightbox(null), []);
 
   const prevImage = useCallback(() => {
@@ -59,7 +61,7 @@ export default function ProductGallery({ images, title }: Props) {
             {images.map((img, i) => (
               <div
                 key={img}
-                className="relative aspect-[16/10] flex-shrink-0 w-full snap-start bg-white cursor-zoom-in"
+                className="relative aspect-[16/10] flex-shrink-0 w-full snap-start snap-always bg-white cursor-zoom-in"
                 onClick={() => setLightbox(i)}
               >
                 <Image
@@ -136,6 +138,13 @@ export default function ProductGallery({ images, title }: Props) {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/85"
           onClick={closeLightbox}
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+          onTouchEnd={(e) => {
+            if (touchStartX.current === null) return;
+            const diff = touchStartX.current - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) diff > 0 ? nextImage() : prevImage();
+            touchStartX.current = null;
+          }}
         >
           {/* Close */}
           <button

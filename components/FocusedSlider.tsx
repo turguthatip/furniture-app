@@ -36,7 +36,7 @@ export default function FocusedSlider() {
       <Slider ref={sliderRef} {...settings}>
         {slides.map((slide, i) => (
           <div key={i} className="px-2">
-            <div className="relative h-[40vh] md:h-[85vh] overflow-hidden rounded-lg">
+            <Link href={`/urunler/${slide.slug}`} className="relative h-[40vh] md:h-[85vh] overflow-hidden rounded-lg block">
               <Image
                 src={slide.src}
                 alt={`${slide.name} ${slide.label}`}
@@ -87,7 +87,7 @@ export default function FocusedSlider() {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </Slider>

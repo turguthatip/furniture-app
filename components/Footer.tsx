@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next-export-optimize-images/image";
 import Link from "next/link";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaPhone, FaMapMarkerAlt, FaTruck } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaMapMarkerAlt, FaTruck } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { HiOutlineRefresh } from "react-icons/hi";
 
@@ -39,20 +39,6 @@ const Footer = () => {
           <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
             Balıkesir'den Türkiye'ye kaliteli ve şık mobilya çözümleri. Yerli üretim, uzun ömürlü konfor.
           </p>
-          <div className="flex gap-4 mt-1">
-            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-              className="text-gray-500 hover:text-green-500 transition-colors">
-              <FaWhatsapp size={22} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-              className="text-gray-500 hover:text-pink-500 transition-colors">
-              <FaInstagram size={22} />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-500 transition-colors">
-              <FaFacebook size={22} />
-            </a>
-          </div>
         </div>
 
         {/* Trust items */}
