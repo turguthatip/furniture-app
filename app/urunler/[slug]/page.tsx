@@ -41,18 +41,25 @@ export default async function ProductPage({ params }: Props) {
 
   const others = productData.filter((p) => p.slug !== product.slug);
 
+  const baseUrl = "https://assuva.com.tr";
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "ItemPage",
     name: product.title,
     description: product.description,
-    image: product.images,
-    brand: { "@type": "Brand", name: "Assuva Mobilya" },
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      priceCurrency: "TRY",
-      seller: { "@type": "Organization", name: "Assuva Mobilya" },
+    url: `${baseUrl}/urunler/${product.slug}`,
+    image: product.images.map((img) => `${baseUrl}/${img}.png`),
+    about: {
+      "@type": "Product",
+      name: product.title,
+      description: product.description,
+      image: product.images.map((img) => `${baseUrl}/${img}.png`),
+      brand: { "@type": "Brand", name: "Assuva Mobilya" },
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Assuva Mobilya",
+      url: baseUrl,
     },
   };
 
