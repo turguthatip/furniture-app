@@ -49,12 +49,13 @@ export default async function ProductPage({ params }: Props) {
     description: product.description,
     url: `${baseUrl}/urunler/${product.slug}`,
     image: product.images.map((img) => `${baseUrl}/${img}.png`),
-    about: {
-      "@type": "Product",
-      name: product.title,
-      description: product.description,
-      image: product.images.map((img) => `${baseUrl}/${img}.png`),
-      brand: { "@type": "Brand", name: "Assuva Mobilya" },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Assuva Mobilya", item: baseUrl },
+        { "@type": "ListItem", position: 2, name: product.category === "kose" ? "Köşe Takımları" : "Koltuk Takımları", item: `${baseUrl}/${product.category === "kose" ? "kose-takimlari" : "koltuk-takimlari"}` },
+        { "@type": "ListItem", position: 3, name: product.title, item: `${baseUrl}/urunler/${product.slug}` },
+      ],
     },
     publisher: {
       "@type": "Organization",

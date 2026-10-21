@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     siteName: "Assuva Mobilya",
     title: "Kaliteli Mobilya Üreticisi - Balıkesir Mobilya",
     description: siteDescription,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Assuva Mobilya" }],
+    images: [{ url: "/edremit-koltuk-takimi-1.png", width: 1200, height: 800, alt: "Assuva Mobilya - Kaliteli Mobilya" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kaliteli Mobilya Üreticisi - Balıkesir Mobilya",
     description: siteDescription,
-    images: ["/og-image.jpg"],
+    images: ["/edremit-koltuk-takimi-1.png"],
   },
 };
 
