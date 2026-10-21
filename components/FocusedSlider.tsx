@@ -7,8 +7,8 @@ import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 
 const slides = [
-  { src: "/pablo_yeni.png", label: "Koltuk Takımı", name: "Pablo", slug: "pablo-koltuk-takimi" },
   { src: "/edremit_yeni.png", label: "Koltuk Takımı", name: "Edremit", slug: "edremit-koltuk-takimi" },
+  { src: "/pablo_yeni.png", label: "Koltuk Takımı", name: "Pablo", slug: "pablo-koltuk-takimi" },
   { src: "/castro_yeni.png", label: "Koltuk Takımı", name: "Castro", slug: "castro-koltuk-takimi" },
   { src: "/Polo_yeni.png", label: "Koltuk Takımı", name: "Polo", slug: "polo-koltuk-takimi" },
   { src: "/seul_yeni.png", label: "Koltuk Takımı", name: "Seul", slug: "seul-koltuk-takimi" },
