@@ -7,8 +7,8 @@ import Image from "next-export-optimize-images/image";
 import Link from "next/link";
 
 const slides = [
-  { src: "/pablo_yeni.png", label: "Koltuk Takımı", name: "Pablo", slug: "pablo-koltuk-takimi" },
   { src: "/edremit_yeni.png", label: "Koltuk Takımı", name: "Edremit", slug: "edremit-koltuk-takimi" },
+  { src: "/pablo_yeni.png", label: "Koltuk Takımı", name: "Pablo", slug: "pablo-koltuk-takimi" },
   { src: "/castro_yeni.png", label: "Koltuk Takımı", name: "Castro", slug: "castro-koltuk-takimi" },
   { src: "/Polo_yeni.png", label: "Koltuk Takımı", name: "Polo", slug: "polo-koltuk-takimi" },
   { src: "/seul_yeni.png", label: "Koltuk Takımı", name: "Seul", slug: "seul-koltuk-takimi" },
@@ -57,24 +57,6 @@ export default function FocusedSlider() {
                 <div className="flex items-center justify-between">
                   <span className="text-white text-xl font-medium">{slide.name}</span>
                   <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => sliderRef.current?.slickPrev()}
-                      className="hidden md:flex w-9 h-9 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white hover:bg-white/25 transition-colors"
-                      aria-label="Önceki"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                      </svg>
-                    </button>
-                    <button
-                      onClick={() => sliderRef.current?.slickNext()}
-                      className="hidden md:flex w-9 h-9 items-center justify-center rounded-full bg-white/15 border border-white/30 text-white hover:bg-white/25 transition-colors"
-                      aria-label="Sonraki"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
                     <Link
                       href={`/urunler/${slide.slug}`}
                       className="flex items-center gap-1.5 bg-white text-gray-900 text-sm font-medium px-4 py-2 rounded-full hover:bg-gray-100 transition-colors"
